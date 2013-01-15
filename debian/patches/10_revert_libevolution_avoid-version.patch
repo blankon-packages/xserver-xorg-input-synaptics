@@ -1,0 +1,302 @@
+Author: Jordi Mallach <jordi@debian.org>
+Description: Revert 160006402248075b95c98e9e34d4538670ba7480
+ Revert upstream patch that adds -avoid-version to all libevolution
+ libs, making them versionless. This is a massive WTF.
+Bug-GNOME: https://bugzilla.gnome.org/show_bug.cgi?id=591436
+Forwarded: no
+
+--- a/a11y/Makefile.am
++++ b/a11y/Makefile.am
+@@ -14,7 +14,7 @@
+ 	gal-a11y-util.h			\
+ 	gal-a11y-factory.h
+ 
+-libevolution_a11y_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libevolution_a11y_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ libevolution_a11y_la_LIBADD =			\
+ 	$(top_builddir)/e-util/libeutil.la	\
+--- a/addressbook/gui/contact-editor/Makefile.am
++++ b/addressbook/gui/contact-editor/Makefile.am
+@@ -24,7 +24,7 @@
+ 	e-contact-quick-add.c			\
+ 	e-contact-quick-add.h
+ 
+-libecontacteditor_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libecontacteditor_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ libecontacteditor_la_LIBADD =						\
+ 	$(top_builddir)/e-util/libeutil.la				\
+--- a/addressbook/gui/contact-list-editor/Makefile.am
++++ b/addressbook/gui/contact-list-editor/Makefile.am
+@@ -19,7 +19,7 @@
+ 	e-contact-list-model.c			\
+ 	e-contact-list-model.h
+ 
+-libecontactlisteditor_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libecontactlisteditor_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ libecontactlisteditor_la_LIBADD =				\
+ 	$(top_builddir)/addressbook/util/libeabutil.la		\
+--- a/addressbook/importers/Makefile.am
++++ b/addressbook/importers/Makefile.am
+@@ -18,7 +18,7 @@
+ 	evolution-csv-importer.c	        \
+ 	evolution-addressbook-importers.h
+ 
+-libevolution_addressbook_importers_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libevolution_addressbook_importers_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ libevolution_addressbook_importers_la_LIBADD = \
+ 	$(top_builddir)/e-util/libeutil.la 				\
+--- a/addressbook/util/Makefile.am
++++ b/addressbook/util/Makefile.am
+@@ -18,7 +18,7 @@
+ 	eab-book-util.c					\
+ 	eab-book-util.h
+ 
+-libeabutil_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libeabutil_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ libeabutil_la_LIBADD =					\
+ 	$(top_builddir)/widgets/misc/libemiscwidgets.la \
+--- a/calendar/gui/Makefile.am
++++ b/calendar/gui/Makefile.am
+@@ -219,7 +219,7 @@
+ 	$(GTKHTML_LIBS)							\
+ 	$(LIBSOUP_LIBS)
+ 
+-libevolution_calendar_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libevolution_calendar_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ EXTRA_DIST =	 			\
+ 	$(ui_DATA)			\
+--- a/calendar/importers/Makefile.am
++++ b/calendar/importers/Makefile.am
+@@ -16,7 +16,7 @@
+ 	evolution-calendar-importer.h	     \
+ 	icalendar-importer.c
+ 
+-libevolution_calendar_importers_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libevolution_calendar_importers_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ libevolution_calendar_importers_la_LIBADD =			\
+ 	$(top_builddir)/e-util/libeutil.la 			\
+--- a/composer/Makefile.am
++++ b/composer/Makefile.am
+@@ -54,7 +54,7 @@
+ 	e-composer-text-header.c		\
+ 	e-msg-composer.c
+ 
+-libcomposer_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libcomposer_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ libcomposer_la_LIBADD =					\
+ 	$(top_builddir)/e-util/libeutil.la		\
+--- a/e-util/Makefile.am
++++ b/e-util/Makefile.am
+@@ -113,7 +113,7 @@
+ 	e-util-private.h			\
+ 	$(PLATFORM_SOURCES)
+ 
+-libeutil_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libeutil_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ libeutil_la_LIBADD = 			\
+ 	$(top_builddir)/libevolution-utils/libevolution-utils.la	\
+--- a/em-format/Makefile.am
++++ b/em-format/Makefile.am
+@@ -22,7 +22,7 @@
+ 	em-inline-filter.c				\
+ 	em-stripsig-filter.c
+ 
+-libemformat_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libemformat_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ libemformat_la_LIBADD =					\
+ 	$(top_builddir)/e-util/libeutil.la		\
+--- a/filter/Makefile.am
++++ b/filter/Makefile.am
+@@ -53,7 +53,7 @@
+ 	e-rule-editor.c				\
+ 	e-rule-editor.h
+ 
+-libfilter_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libfilter_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ libfilter_la_LIBADD = 				\
+ 	$(top_builddir)/libevolution-utils/libevolution-utils.la	\
+--- a/mail/Makefile.am
++++ b/mail/Makefile.am
+@@ -196,7 +196,7 @@
+ 	$(GTKHTML_LIBS)					\
+ 	$(SMIME_LIBS)
+ 
+-libevolution_mail_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libevolution_mail_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ libevolution_mail_la_DEPENDENCIES = em-filter-i18n.h
+ 
+--- a/mail/importers/Makefile.am
++++ b/mail/importers/Makefile.am
+@@ -19,7 +19,7 @@
+ 	pine-importer.c				\
+ 	evolution-mbox-importer.c
+ 
+-libevolution_mail_importers_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libevolution_mail_importers_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ libevolution_mail_importers_la_LIBADD =				\
+ 	$(top_builddir)/e-util/libeutil.la			\
+--- a/shell/Makefile.am
++++ b/shell/Makefile.am
+@@ -88,7 +88,7 @@
+ 	e-shell-window-actions.c		\
+ 	es-event.c
+ 
+-libeshell_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libeshell_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ libeshell_la_LIBADD =					\
+ 	$(top_builddir)/e-util/libeutil.la		\
+--- a/smclient/Makefile.am
++++ b/smclient/Makefile.am
+@@ -22,7 +22,8 @@
+ 	$(EGG_SMCLIENT_LIBS) \
+ 	$(platform_libs)
+ 
+-libeggsmclient_la_LDFLAGS = -avoid-version $(platform_ldflags)
++libeggsmclient_la_LDFLAGS = \
++	$(platform_ldflags)
+ 
+ libeggsmclient_la_SOURCES = \
+ 	eggsmclient.c \
+--- a/smime/gui/Makefile.am
++++ b/smime/gui/Makefile.am
+@@ -46,7 +46,7 @@
+ 	$(GNOME_PLATFORM_LIBS)				\
+ 	$(CERT_UI_LIBS)
+ 
+-libevolution_smime_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libevolution_smime_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ ui_DATA = smime-ui.ui
+ 
+--- a/smime/lib/Makefile.am
++++ b/smime/lib/Makefile.am
+@@ -35,6 +35,6 @@
+ 	$(GNOME_PLATFORM_LIBS)			\
+ 	$(CERT_UI_LIBS)
+ 
+-libessmime_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libessmime_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ -include $(top_srcdir)/git.mk
+--- a/widgets/e-timezone-dialog/Makefile.am
++++ b/widgets/e-timezone-dialog/Makefile.am
+@@ -13,7 +13,7 @@
+ 	e-timezone-dialog.c	\
+ 	e-timezone-dialog.h
+ 
+-libetimezonedialog_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libetimezonedialog_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ libetimezonedialog_la_LIBADD =				\
+ 	$(top_builddir)/widgets/misc/libemiscwidgets.la	\
+--- a/widgets/menus/Makefile.am
++++ b/widgets/menus/Makefile.am
+@@ -40,7 +40,7 @@
+ 	gal-view-new-dialog.h			\
+ 	gal-view.h
+ 
+-libmenus_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libmenus_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ libmenus_la_LIBADD =					\
+ 	$(top_builddir)/e-util/libeutil.la		\
+--- a/widgets/misc/Makefile.am
++++ b/widgets/misc/Makefile.am
+@@ -150,7 +150,7 @@
+ 	ea-cell-table.c				\
+ 	ea-widgets.c
+ 
+-libemiscwidgets_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libemiscwidgets_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ libemiscwidgets_la_LIBADD =					\
+ 	$(top_builddir)/e-util/libeutil.la			\
+--- a/widgets/table/Makefile.am
++++ b/widgets/table/Makefile.am
+@@ -164,7 +164,7 @@
+ 	gal-a11y-e-tree.h			\
+ 	gal-a11y-e-tree-factory.h
+ 
+-libetable_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libetable_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ libetable_la_LIBADD =						\
+ 	$(top_builddir)/a11y/libevolution-a11y.la		\
+--- a/widgets/text/Makefile.am
++++ b/widgets/text/Makefile.am
+@@ -28,7 +28,7 @@
+ 	gal-a11y-e-text-factory.h		\
+ 	gal-a11y-e-text.h
+ 
+-libetext_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libetext_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ libetext_la_LIBADD = 						\
+ 	$(top_builddir)/a11y/libevolution-a11y.la		\
+--- a/capplet/settings/Makefile.am
++++ b/capplet/settings/Makefile.am
+@@ -63,5 +63,5 @@
+ 	$(top_builddir)/libemail-engine/libemail-engine.la \
+ 	$(top_builddir)/e-util/libeutil.la
+ 
+-libevolution_mail_settings_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libevolution_mail_settings_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+--- a/libemail-engine/Makefile.am
++++ b/libemail-engine/Makefile.am
+@@ -62,7 +62,7 @@
+ 	$(GNOME_PLATFORM_LIBS) \
+ 	$(NULL)
+ 
+-libemail_engine_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libemail_engine_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = libemail-engine.pc
+--- a/libemail-utils/Makefile.am
++++ b/libemail-utils/Makefile.am
+@@ -35,7 +35,7 @@
+ 	mail-mt.c \
+ 	$(NULL)
+ 
+-libemail_utils_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libemail_utils_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ libemail_utils_la_LIBADD = \
+ 	$(top_builddir)/filter/libfilter.la \
+--- a/libevolution-utils/Makefile.am
++++ b/libevolution-utils/Makefile.am
+@@ -30,7 +30,7 @@
+ 	evolution-util.c \
+ 	$(NULL)
+ 
+-libevolution_utils_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libevolution_utils_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ libevolution_utils_la_LIBADD = \
+ 	$(EVOLUTION_DATA_SERVER_LIBS) \
+--- a/libgnomecanvas/Makefile.am
++++ b/libgnomecanvas/Makefile.am
+@@ -62,7 +62,7 @@
+ 	$(GNOME_PLATFORM_LIBS) \
+ 	$(MATH_LIB)
+ 
+-libgnomecanvas_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libgnomecanvas_la_LDFLAGS = $(NO_UNDEFINED)
+ 
+ BUILT_SOURCES = $(MARSHAL_GENERATED)
+ 

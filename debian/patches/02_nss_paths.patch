@@ -1,0 +1,17 @@
+Author: Mathieu Trudel-Lapierre <mathieu.trudel-lapierre@canonical.com>
+Description: Fix the NSS libdir to add a "/nss"
+ That variable is only used to point to the directory in which nssckbi (the
+ built-in certificate store of NSS) lives, and it's actually under libdir/nss
+ rather than directly under libdir.
+
+--- a/configure.ac
++++ b/configure.ac
+@@ -842,7 +842,7 @@
+ 			fi
+ 			AC_DEFINE(HAVE_NSS,1,[Define if you have NSS])
+ 			AC_DEFINE(HAVE_SSL,1,[Define if you have a supported SSL library])
+-			AC_DEFINE_UNQUOTED(MOZILLA_NSS_LIB_DIR,"`$PKG_CONFIG --variable=libdir $mozilla_nss`",[Define to the full path of mozilla nss library])
++			AC_DEFINE_UNQUOTED(MOZILLA_NSS_LIB_DIR,"`$PKG_CONFIG --variable=libdir $mozilla_nss`/nss",[Define to the full path of mozilla nss library])
+ 			MANUAL_NSPR_CFLAGS=""
+ 			MANUAL_NSPR_LIBS=""
+ 			MANUAL_NSS_CFLAGS=""
