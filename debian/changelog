@@ -1,3 +1,52 @@
+evolution (3.6.3-1blankon1) suroboyo; urgency=low
+
+  * New upstream release 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Mon, 04 Mar 2013 19:10:33 +0700
+
+evolution (3.6.3-1) experimental; urgency=low
+
+  * New upstream release
+  * debian/control: Update build-deps on EDS packages
+  * debian/patches/02*.patch: Dropped, fixed upstream
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Thu, 24 Jan 2013 22:10:24 +0100
+
+evolution (3.6.1-1) experimental; urgency=low
+
+  * New upstream release
+  * debian/patches/02*.patch:
+    + Added. post-release 3.6.1 relese patches from the evo gnome-3.6
+      git tree:
+      fb9b223 Encode also message_uid in e_mail_part_build_uri()
+      9018705 Revert "Decode EMailRequest::priv::uri_base URI-escaped letters"
+      285d428 MailFolderCache: Silently ignore cancellation errors.
+      ebc86ad Decode EMailRequest::priv::uri_base URI-escaped letters
+      96777ce Bug #310978 - USENET always requires authentication
+      8c81665 GN-bug #685262 - Attachments disappear when dragged in message preview
+      aea55dd Do not crash in create_default_shell()
+      031f8b2 Bug #686278 - Prefer-plain can break parts list
+      d731853 Bug #663844 - [CalDAV] calendar-home-set/href may contain full URI
+      366a9d1 evolution.convert: Remove leftover "force-message-limit" entry.
+      f7763ba Bug 685786 - EWebView: Signal handlers never disconnected
+      6bbe980 EWebView cleanups.
+      96d29a6 EMailDisplay cleanups.
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Thu, 18 Oct 2012 22:41:05 +0200
+
+evolution (3.6.0-1) experimental; urgency=low
+
+  * New upstream release
+  * Sync with ubuntu
+    * debian/patches/04_gettext_intltool.patch: Dropped fixed upstream
+    * debian/patches/02_nss_paths.patch: refreshed
+    * debian/patches/10_revert_libevolution_avoid-version.patch: refresh
+    * debian/evolution{,-plugins*}.install: Don't install plugins that
+      have been converted into modules
+    * debian/evolution-common.install: Update for new help install location
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Fri, 05 Oct 2012 23:51:00 +0200
+
 evolution (3.4.4-1blankon1) rote-updates; urgency=low
 
   * New upstream release merge whit sid

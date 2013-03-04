@@ -1,3 +1,2 @@
 02_nss_paths.patch
-04_gettext_intltool.patch
 10_revert_libevolution_avoid-version.patch

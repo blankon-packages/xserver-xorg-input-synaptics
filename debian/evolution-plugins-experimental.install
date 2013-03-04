@@ -1,4 +1,2 @@
 usr/lib/evolution/*/plugins/*-external-editor.so
 usr/lib/evolution/*/plugins/*-external-editor.eplug
-usr/lib/evolution/*/plugins/*-tnef-attachments.so
-usr/lib/evolution/*/plugins/*-tnef-attachments.eplug
