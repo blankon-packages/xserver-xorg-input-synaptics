@@ -18,3 +18,7 @@ usr/lib/evolution/*/plugins/*-dbx-import.so
 usr/lib/evolution/*/plugins/*-dbx-import.eplug
 usr/lib/evolution/*/plugins/*-pst-import.so
 usr/lib/evolution/*/plugins/*-pst-import.eplug
+usr/lib/evolution/*/plugins/*-bbdb.so
+usr/lib/evolution/*/plugins/*-bbdb.eplug
+usr/lib/evolution/*/plugins/*-attachment-reminder.so
+usr/lib/evolution/*/plugins/*-attachment-reminder.eplug

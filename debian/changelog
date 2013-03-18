@@ -1,3 +1,29 @@
+evolution (3.7.91-1blankon1) suroboyo; urgency=low
+
+  * New upstream release
+  * Changes debian/control :
+  	- Drop linux-any
+  	- Change maintainer
+
+ -- Mahyuddin Idram Ahmad <dotovr@di.blankon.in>  Mon, 18 Mar 2013 21:44:18 +0700
+
+evolution (3.7.91-1) experimental; urgency=low
+
+  [ Jeremy Bicha ]
+  * debian/control:
+    - Drop obsolete mx dependency (not needed since 3.5.90)
+
+  [ Sjoerd Simons ]
+  * New upstream release (3.7.91)
+  * debian/control: Update build-depends
+  * debian/rules: use --disable-contact-maps as we don't have the right geoclue
+    version
+  * debian/patches/10_revert_libevolution_avoid-version.patch:
+    + Refreshed.
+  * Disable contact maps pending new geoclue
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Fri, 15 Mar 2013 22:17:59 +0100
+
 evolution (3.6.3-1blankon1) suroboyo; urgency=low
 
   * New upstream release 
