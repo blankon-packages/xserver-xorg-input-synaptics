@@ -1,8 +1,7 @@
 Source: evolution
 Section: gnome
 Priority: optional
-Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
-XSBC-Original-Maintainer: Debian Evolution Maintainers <pkg-evolution-maintainers@lists.alioth.debian.org>
+Maintainer: Debian Evolution Maintainers <pkg-evolution-maintainers@lists.alioth.debian.org>
 Uploaders: Jordi Mallach <jordi@debian.org>, 
            Margarita Manterola <debian@marga.com.ar>,
            Loic Minier <lool@dooz.org>,
@@ -23,13 +22,13 @@ Build-Depends: debhelper (>= 9),
                libglib2.0-dev (>= 2.34),
                libgtk-3-dev (>= 3.4.0),
                libgail-3-dev (>= 3.0.2),
-               libebook1.2-dev (>= 3.7.91),
-               libecal1.2-dev (>= 3.7.91),
-               libedataserver1.2-dev (>= 3.7.91),
-               libebackend1.2-dev (>= 3.7.91),
+               libebook1.2-dev (>= 3.7.92),
+               libecal1.2-dev (>= 3.7.92),
+               libedataserver1.2-dev (>= 3.7.92),
+               libebackend1.2-dev (>= 3.7.92),
                libebook-contacts1.2-dev,
-               libcamel1.2-dev (>= 3.7.91),
-               evolution-data-server-dev (>= 3.7.91),
+               libcamel1.2-dev (>= 3.7.92),
+               evolution-data-server-dev (>= 3.7.92),
                evolution-data-server-dev (<< 3.9),
                libgtkhtml-4.0-dev (>= 4.5.2),
                libgtkhtml-editor-4.0-dev,
@@ -49,7 +48,6 @@ Build-Depends: debhelper (>= 9),
                pkg-config (>= 0.16.0),
                gtk-doc-tools (>= 1.14),
                libcairo2-dev (>= 1.10),
-               libchamplain-gtk-0.12-dev (>= 0.12),
                libatk1.0-dev,
                x11proto-core-dev,
                libldap2-dev,

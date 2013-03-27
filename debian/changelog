@@ -1,3 +1,17 @@
+evolution (3.7.92-1blankon1) suroboyo; urgency=low
+
+  * New upstream release
+
+ -- Mahyuddin Idram Ahmad <dotovr@di.blankon.in>  Wed, 27 Mar 2013 17:12:42 +0700
+
+evolution (3.7.92-1) experimental; urgency=low
+
+  * New upstream release
+  * debian/control: Dont need libchamplain when building with contact maps
+  * debian/control: Update build-deps on e-d-s libraries
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Sat, 23 Mar 2013 22:53:19 +0100
+
 evolution (3.7.91-1blankon1) suroboyo; urgency=low
 
   * New upstream release
