@@ -1,8 +1,33 @@
-evolution (3.7.92-1blankon1) suroboyo; urgency=low
+evolution (3.8.2-1blankon1) suroboyo; urgency=low
 
-  * New upstream release
+  * Upstream release
+  * changes debian/control maintainer BlankOn
 
- -- Mahyuddin Idram Ahmad <dotovr@di.blankon.in>  Wed, 27 Mar 2013 17:12:42 +0700
+ -- mijortsa <mijortsa@mint>  Fri, 14 Jun 2013 22:36:23 +0700
+
+evolution (3.8.2-1) experimental; urgency=low
+
+  [ Jeremy Bicha ]
+  * New upstream release.
+  * debian/evolution-common.gsettings-override:
+    - Drop obsolete spamd-binary key
+  * debian/control:
+    - Bump eds build-depends
+    - Build-depend on spamc for configure check
+
+  [ Sjoerd Simons ]
+  * New upstream release (3.8.2)
+  * debian/control:
+    - Bump eds build-depends
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Fri, 17 May 2013 10:35:34 +0200
+
+evolution (3.8.0-1) experimental; urgency=low
+
+  * New upstream release.
+  * Bump build-depends as per configure.ac.
+
+ -- Jordi Mallach <jordi@debian.org>  Sat, 30 Mar 2013 21:59:24 -0500
 
 evolution (3.7.92-1) experimental; urgency=low
 
@@ -11,15 +36,6 @@ evolution (3.7.92-1) experimental; urgency=low
   * debian/control: Update build-deps on e-d-s libraries
 
  -- Sjoerd Simons <sjoerd@debian.org>  Sat, 23 Mar 2013 22:53:19 +0100
-
-evolution (3.7.91-1blankon1) suroboyo; urgency=low
-
-  * New upstream release
-  * Changes debian/control :
-  	- Drop linux-any
-  	- Change maintainer
-
- -- Mahyuddin Idram Ahmad <dotovr@di.blankon.in>  Mon, 18 Mar 2013 21:44:18 +0700
 
 evolution (3.7.91-1) experimental; urgency=low
 
@@ -37,12 +53,6 @@ evolution (3.7.91-1) experimental; urgency=low
   * Disable contact maps pending new geoclue
 
  -- Sjoerd Simons <sjoerd@debian.org>  Fri, 15 Mar 2013 22:17:59 +0100
-
-evolution (3.6.3-1blankon1) suroboyo; urgency=low
-
-  * New upstream release 
-
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Mon, 04 Mar 2013 19:10:33 +0700
 
 evolution (3.6.3-1) experimental; urgency=low
 
@@ -87,12 +97,21 @@ evolution (3.6.0-1) experimental; urgency=low
 
  -- Sjoerd Simons <sjoerd@debian.org>  Fri, 05 Oct 2012 23:51:00 +0200
 
-evolution (3.4.4-1blankon1) rote-updates; urgency=low
+evolution (3.4.4-3) unstable; urgency=low
 
-  * New upstream release merge whit sid
-  * debian/rules change maintainer, drop linux-any
+  * Add 06_fix_mbox_to_maildir_conversion.patch: fix mbox→Maildir
+    conversion logic for users of Evo 2.32 and earlier, due to the
+    move to XDG directories (closes: #701603, #702360).
 
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 15 Jan 2013 02:51:00 +0000
+ -- Jordi Mallach <jordi@debian.org>  Mon, 25 Mar 2013 18:07:00 -0500
+
+evolution (3.4.4-2) unstable; urgency=low
+
+  * debian/control: Add myself to Uploaders
+  * d/p/05_fix_addressbook_map_crash.patch: Fix crash when trying to open the
+    "Address Book Map" window (Closes: #699850)
+
+ -- Laurent Bigonville <bigon@debian.org>  Sat, 09 Feb 2013 17:16:12 +0100
 
 evolution (3.4.4-1) unstable; urgency=low
 
