@@ -1,7 +1,8 @@
 Source: evolution
 Section: gnome
 Priority: optional
-Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
+Maintainer: BlankOn Developers <Blankon-dev@googlegroups.com>
+XSBC-Original-Maintainer: Debian Evolution Maintainers <pkg-evolution-maintainers@lists.alioth.debian.org>
 Uploaders: Jordi Mallach <jordi@debian.org>, 
            Margarita Manterola <debian@marga.com.ar>,
            Loic Minier <lool@dooz.org>,
@@ -42,7 +43,7 @@ Build-Depends: debhelper (>= 9),
                libdbus-glib-1-dev (>= 0.6),
                libgweather-3-dev (>= 3.5.0),
                libcanberra-gtk3-dev (>= 0.25),
-               network-manager-dev (>= 0.7) [linux-any],
+               network-manager-dev (>= 0.7),
                intltool (>= 0.40.0),
                libtool (>= 2.2),
                pkg-config (>= 0.16.0),
