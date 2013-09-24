@@ -15,7 +15,7 @@ Build-Depends:
  pkg-config,
  quilt,
  xutils-dev (>= 1:7.5+4),
- libmtdev-dev [linux-any],
+ libmtdev-dev,
 Standards-Version: 3.9.4
 Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-input-synaptics
 Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-input-synaptics.git
@@ -68,7 +68,7 @@ Description: Synaptics TouchPad driver for X.Org server (development headers)
  little use for this package.
 
 Package: xserver-xorg-input-synaptics-dbg
-Architecture: linux-any
+Architecture: any
 Depends:
  ${misc:Depends},
  xserver-xorg-input-synaptics (= ${binary:Version}),
@@ -76,6 +76,7 @@ Section: debug
 Priority: extra
 Description: Synaptics TouchPad driver for X.Org server
  This package provides an input driver for the X.Org X server to enable
+ advanced features of the Synaptics Touchpad including:
  advanced features of the Synaptics Touchpad including:
  .
   * Movement with adjustable, non-linear acceleration and speed

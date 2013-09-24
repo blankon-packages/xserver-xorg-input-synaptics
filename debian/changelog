@@ -4,6 +4,7 @@ xserver-xorg-input-synaptics (1.7.1-1blankon1) suroboyo; urgency=low
     - fix synaptic drive scroll
     - fix actived touchpad in login greeter
   * Change debian/control Maintainer
+    -remove linux-any
 
  -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Tue, 24 Sep 2013 21:44:07 +0700
 
