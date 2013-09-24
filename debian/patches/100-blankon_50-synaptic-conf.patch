@@ -1,0 +1,34 @@
+diff -Naur xf86-input-synaptics-1.7.1.orig/conf/50-synaptics.conf xf86-input-synaptics-1.7.1/conf/50-synaptics.conf
+--- xf86-input-synaptics-1.7.1.orig/conf/50-synaptics.conf	2013-02-01 05:35:21.000000000 +0000
++++ xf86-input-synaptics-1.7.1/conf/50-synaptics.conf	2013-09-24 21:29:28.284596014 +0000
+@@ -8,9 +8,27 @@
+ #   Option "OptionName" "value"
+ #
+ Section "InputClass"
+-        Identifier "touchpad catchall"
+-        Driver "synaptics"
+-        MatchIsTouchpad "on"
++        Identifier      "Touchpad"                      # required
++        MatchIsTouchpad "yes"                           # required
++        Driver          "synaptics"                     # required
++        Option          "MinSpeed"              "0.5"
++        Option          "MaxSpeed"              "1.0"
++        Option          "AccelFactor"           "0.075"
++        Option          "TapButton1"            "1"
++        Option          "TapButton2"            "2"     # multitouch
++        Option          "TapButton3"            "3"     # multitouch
++        Option          "VertTwoFingerScroll"   "1"     # multitouch
++        Option          "HorizTwoFingerScroll"  "1"     # multitouch
++        Option          "VertEdgeScroll"        "1"
++        Option          "CoastingSpeed"         "8"
++        Option          "CornerCoasting"        "1"
++        Option          "CircularScrolling"     "1"
++        Option          "CircScrollTrigger"     "7"
++        Option          "EdgeMotionUseAlways"   "1"
++        Option          "LBCornerButton"        "8"     # browser "back" btn
++        Option          "RBCornerButton"        "9"     # browser "forward" btn
++        Option          "EmulateTwoFingerMinZ"  "35"
++        Option          "EmulateTwoFingerMinW"  "8"
+ # This option is recommend on all Linux systems using evdev, but cannot be
+ # enabled by default. See the following link for details:
+ # http://who-t.blogspot.com/2010/11/how-to-ignore-configuration-errors.html

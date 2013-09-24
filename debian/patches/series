@@ -1,2 +1,4 @@
-02_nss_paths.patch
-10_revert_libevolution_avoid-version.patch
+#01-synaptics-dont-grab-if-not-on-current-VT.patch
+02-do-not-use-synaptics-for-keyboards.patch
+03-bug-return-val.patch
+100-blankon_50-synaptic-conf.patch

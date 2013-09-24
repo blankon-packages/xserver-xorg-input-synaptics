@@ -1,3 +1,0 @@
-?package(evolution):needs="X11" section="Applications/Network/Communication" \
-  title="Evolution" command="/usr/bin/evolution" \
-  hints="Gnome,Mail,Calendar" icon="/usr/share/pixmaps/evolution.xpm"

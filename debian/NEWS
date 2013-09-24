@@ -1,29 +1,29 @@
-evolution (2.29.5-1) experimental; urgency=low
+xserver-xorg-input-synaptics (1.2.0-1) unstable; urgency=low
 
-  Due to gnome-pilot not beeing recent enough in Debian, it is now disabled
-  in evolution builds.
+  * All the shared memory code has been removed from synclient and syndaemon.
+    The SHMConfig option is still available but the only use is for monitoring
+    the hardware state data.
+    If you have any script that changes the synaptics driver configuration
+    make sure that you don't use the -s option to synclient.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Mon, 11 Jan 2010 15:08:11 +0100
+ -- Mattia Dongili <malattia@debian.org>  Fri, 20 Nov 2009 00:32:58 +0900
 
-evolution (2.24.5-2) unstable; urgency=low
+xserver-xorg-input-synaptics (1.1.1~git20090510-1) unstable; urgency=low
 
-  Evolution 2.24 now uses an sqlite database to store the messages
-  summaries, so at first restart it'll generate the database. That could
-  take some time for large messages folders.
+  * Tapping has been disabled by default on many touchpads by upstream, see
+    the "NOTES" section in the synaptics(4) manpage for a short overview
+    about how defaults are calculated.
+    If you want to re-enable it, you can do so from within the X
+    environment by running the following commands in a terminal:
 
-  Evolution 2.24 is a large upgrade, and touches many things, so, just in
-  case, you should make sure:
-  - to make a backup of current setup, either by using the integrated
-    plugin or by backing up your $HOME/.evolution folders.
-  - to shutdown Evolution completely before upgrading, using:
-    evolution --force-shutdown
+        $ synclient TapButton1=1
+        $ synclient TapButton2=2
+        $ synclient TapButton3=3
 
- -- Yves-Alexis Perez <corsac@debian.org>  Wed, 11 Mar 2009 23:41:01 +0100
+    Note that the configuration will not be permanently modified, to do
+    so assign the above option values in your xorg.conf (see the synaptics(4)
+    manpage or the documents in /usr/share/doc/xserver-xorg-input-synaptics
+    for additional details).  Another alternative is to use desktop
+    environment specific tools like gpointing-device-settings or touchfreeze.
 
-evolution (2.2.2-2) unstable; urgency=low
-
-  Plugin package is available now.
-  Please install 'evolution-plugins' package if you want to use it.
-
- -- Takuo KITAME <kitame@debian.org>  Thu, 14 Apr 2005 12:12:38 +0900
-
+ -- David Nusinow <dnusinow@debian.org>  Sat, 11 Apr 2009 16:23:11 -0400
