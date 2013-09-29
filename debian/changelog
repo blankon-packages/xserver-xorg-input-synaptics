@@ -1,3 +1,9 @@
+xserver-xorg-input-synaptics (1.7.1-2+b1-blankon1) suroboyo; urgency=low
+
+  * versioning 1.7.1-2blankon2 to 1.7.1-2+b1-blankon1
+
+ -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Sun, 29 Sep 2013 21:10:35 +0700
+
 xserver-xorg-input-synaptics (1.7.1-2blankon2) suroboyo; urgency=low
 
   * remove debian/patch (line 21-22) 100-blankon_50-synaptic-conf.patch :
