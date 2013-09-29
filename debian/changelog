@@ -1,3 +1,24 @@
+xserver-xorg-input-synaptics (1.7.1-2blankon2) suroboyo; urgency=low
+
+  * remove debian/patch (line 21-22) 100-blankon_50-synaptic-conf.patch :
+    - Option "VertTwoFingerScroll"  "1"  # multitouch
+    - Option "HorizTwoFingerScroll"  "1"  # multitouch
+
+ -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Sun, 29 Sep 2013 18:42:46 +0700
+
+xserver-xorg-input-synaptics (1.7.1-2blankon1) suroboyo; urgency=low
+
+  * New upstream release
+
+ -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Sun, 29 Sep 2013 18:33:15 +0700
+
+xserver-xorg-input-synaptics (1.7.1-2) unstable; urgency=low
+
+  * Add Breaks on kde-config-touchpad (<< 0.8.1-2~) because of #722058
+    (closes: #722006).
+
+ -- Julien Cristau <jcristau@debian.org>  Sun, 22 Sep 2013 16:17:34 +0200
+
 xserver-xorg-input-synaptics (1.7.1-1blankon1) suroboyo; urgency=low
 
   * patch 100-blankon_50-synaptic-conf.patch
