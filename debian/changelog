@@ -1,3 +1,9 @@
+xserver-xorg-input-synaptics (1.7.2-1blankon1) suroboyo; urgency=medium
+
+  * New upstream release
+
+ -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Wed, 18 Dec 2013 16:47:08 +0700
+
 xserver-xorg-input-synaptics (1.7.1-2+b1-blankon1) suroboyo; urgency=low
 
   * versioning 1.7.1-2blankon2 to 1.7.1-2+b1-blankon1
