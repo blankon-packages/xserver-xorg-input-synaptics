@@ -1,7 +1,7 @@
 Source: xserver-xorg-input-synaptics
 Section: x11
 Priority: optional
-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Maintainer: BlankOn Developers <Blankon-dev@googlegroups.com>
 Uploaders: Mattia Dongili <malattia@debian.org>, Cyril Brulebois <kibi@debian.org>
 Build-Depends:
  debhelper (>= 8),
@@ -15,7 +15,7 @@ Build-Depends:
  pkg-config,
  quilt,
  xutils-dev (>= 1:7.5+4),
- libmtdev-dev [linux-any],
+ libmtdev-dev
 Standards-Version: 3.9.5
 Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-input-synaptics
 Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-input-synaptics.git
