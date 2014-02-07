@@ -1,28 +1,27 @@
-xserver-xorg-input-synaptics (1.7.2-1blankon1) suroboyo; urgency=medium
+xserver-xorg-input-synaptics (1.7.3-1blankon1) suroboyo; urgency=medium
 
-  * New upstream release
+  * added 100-blankon_50-synaptic-conf.patch
 
- -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Wed, 18 Dec 2013 16:47:08 +0700
+ -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Fri, 07 Feb 2014 17:35:19 +0700
 
-xserver-xorg-input-synaptics (1.7.1-2+b1-blankon1) suroboyo; urgency=low
+xserver-xorg-input-synaptics (1.7.3-1) unstable; urgency=medium
 
-  * versioning 1.7.1-2blankon2 to 1.7.1-2+b1-blankon1
+  [ Michele Cane ]
+  * New upstream release.
 
- -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Sun, 29 Sep 2013 21:10:35 +0700
+ -- Julien Cristau <jcristau@debian.org>  Sun, 19 Jan 2014 11:46:16 +0100
 
-xserver-xorg-input-synaptics (1.7.1-2blankon2) suroboyo; urgency=low
+xserver-xorg-input-synaptics (1.7.2-1) unstable; urgency=medium
 
-  * remove debian/patch (line 21-22) 100-blankon_50-synaptic-conf.patch :
-    - Option "VertTwoFingerScroll"  "1"  # multitouch
-    - Option "HorizTwoFingerScroll"  "1"  # multitouch
+  [ Michele Cane ]
+  * New upstream release.
+  * Bump Standard-Version to 3.9.5, no changes needed.
+  * Refresh patches.
 
- -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Sun, 29 Sep 2013 18:42:46 +0700
+  [ Julien Cristau ]
+  * Disable silent build rules and silent test failures.
 
-xserver-xorg-input-synaptics (1.7.1-2blankon1) suroboyo; urgency=low
-
-  * New upstream release
-
- -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Sun, 29 Sep 2013 18:33:15 +0700
+ -- Julien Cristau <jcristau@debian.org>  Sun, 15 Dec 2013 19:07:48 +0100
 
 xserver-xorg-input-synaptics (1.7.1-2) unstable; urgency=low
 
@@ -30,16 +29,6 @@ xserver-xorg-input-synaptics (1.7.1-2) unstable; urgency=low
     (closes: #722006).
 
  -- Julien Cristau <jcristau@debian.org>  Sun, 22 Sep 2013 16:17:34 +0200
-
-xserver-xorg-input-synaptics (1.7.1-1blankon1) suroboyo; urgency=low
-
-  * patch 100-blankon_50-synaptic-conf.patch
-    - fix synaptic drive scroll
-    - fix actived touchpad in login greeter
-  * Change debian/control Maintainer
-    -remove linux-any
-
- -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Tue, 24 Sep 2013 21:44:07 +0700
 
 xserver-xorg-input-synaptics (1.7.1-1) unstable; urgency=low
 
