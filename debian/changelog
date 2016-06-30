@@ -1,3 +1,72 @@
+xserver-xorg-input-synaptics (1.8.3-2blankon1) tambora; urgency=medium
+
+  * Add patch 04_blankon_activate_touchpad.patch. 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Fri, 01 Jul 2016 00:02:02 +0700
+
+xserver-xorg-input-synaptics (1.8.3-2) unstable; urgency=medium
+
+  * Cherry-pick upstream commit 59e5db, which renames 50-synaptics.conf
+    to 70-synaptics.conf. This means the synaptic driver will be used
+    instead of the libinput driver when both are installed.
+  * Drop dbg package in favor of the dbgsym.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Thu, 26 May 2016 18:32:56 +0200
+
+xserver-xorg-input-synaptics (1.8.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Cristau <jcristau@debian.org>  Sun, 24 Jan 2016 14:31:57 +0100
+
+xserver-xorg-input-synaptics (1.8.2-1) unstable; urgency=medium
+
+  * Let uscan verify tarball signatures.
+  * New upstream release.
+  * Bump debhelper compat level to 9.
+
+ -- Julien Cristau <jcristau@debian.org>  Sun, 03 May 2015 10:17:33 +0200
+
+xserver-xorg-input-synaptics (1.8.1-1) unstable; urgency=medium
+
+  * New upstream release
+  - eventcomm: ensure we're on the same clock as the server (closes: #760779)
+  - Limit the movement to 20 mm per event (closes: #672601)
+
+  [ Maarten Lankhorst ]
+  * Drop libmtdev-dev, unused in 1.8.0.
+  * Add dependency on libxtst-dev again to enable support for XRecord.
+    (closes: #759345)
+
+ -- maximilian attems <maks@debian.org>  Wed, 16 Jul 2014 22:04:44 +0200
+
+xserver-xorg-input-synaptics (1.8.0-1) unstable; urgency=medium
+
+  [ Julien Cristau ]
+  * Remove Cyril from Uploaders.
+
+ -- maximilian attems <maks@debian.org>  Sat, 12 Jul 2014 19:20:04 +0200
+
+xserver-xorg-input-synaptics (1.8.0-1~exp2) experimental; urgency=medium
+
+  * Mark libevdev-dev build dependency [linux-any]. (closes: #749286)
+    Thanks to Pino Toscano <pino@debian.org>.
+
+ -- maximilian attems <maks@debian.org>  Wed, 28 May 2014 05:46:25 +0200
+
+xserver-xorg-input-synaptics (1.8.0-1~exp1) experimental; urgency=medium
+
+  [ Maarten Lankhorst ]
+  * Drop libxtst-dev conflicts, add libevdev-dev.
+
+  [ maximilian attems ]
+  * New upstream release (closes: #743488).
+    - Revert "Purge scrollbuttons (repeat)" (closes: #722006).
+    - support newer Thinkpads (closes: #705807)
+  * add myself to Uploaders.
+
+ -- maximilian attems <maks@debian.org>  Fri, 23 May 2014 18:27:28 +0200
+
 xserver-xorg-input-synaptics (1.7.3-1+b1+blankon1) suroboyo; urgency=medium
 
   * upstream versi release
