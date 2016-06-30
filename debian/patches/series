@@ -1,2 +1,3 @@
-02-do-not-use-synaptics-for-keyboards.patch
+#02-do-not-use-synaptics-for-keyboards.patch
 03-bug-return-val.patch
+04_blankon_activate_touchpad.patc
