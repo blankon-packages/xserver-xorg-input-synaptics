@@ -2,7 +2,3 @@ usr/lib/xorg/modules/input/*.so
 usr/bin/*
 usr/share/man
 usr/share/X11
-usr/lib/xorg/modules/input/*.so
-usr/bin/*
-usr/share/man
-usr/share/X11
