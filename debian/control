@@ -70,7 +70,6 @@ Description: Synaptics TouchPad driver for X.Org server (development headers)
  driver found in xserver-xorg-input-synaptics. Non-developers likely have
  little use for this package.
 Source: xserver-xorg-input-synaptics
-Section: x11
 Priority: optional
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Uploaders: Mattia Dongili <malattia@debian.org>, maximilian attems <maks@debian.org>
