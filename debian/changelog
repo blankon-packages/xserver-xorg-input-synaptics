@@ -1,3 +1,10 @@
+xserver-xorg-input-synaptics (1.8.3-2blankon2) tambora; urgency=medium
+
+  * Add config for active touchpad
+  * Disable #patch 04_blankon_active_touchpad
+
+ -- Syai Mif <syaimif@di.blankon.in>  Sat, 02 Jul 2016 05:34:33 +0700
+
 xserver-xorg-input-synaptics (1.8.3-2blankon1) tambora; urgency=medium
 
   * Add patch 04_blankon_activate_touchpad.patch. 
