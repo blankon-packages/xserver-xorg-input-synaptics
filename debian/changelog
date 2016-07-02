@@ -1,6 +1,6 @@
 xserver-xorg-input-synaptics (1.8.3-2blankon3) tambora; urgency=medium
 
-  * patch 06_blankon_libinput_touchpad.patch
+  * changes 70-synaptics.conf
 
  -- Mijortsa <mijortsa@localhost>  Sat, 02 Jul 2016 10:07:57 +0700
 
